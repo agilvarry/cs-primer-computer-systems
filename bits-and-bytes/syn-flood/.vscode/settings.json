@@ -1,0 +1,11 @@
+{
+	"filewatcher.commands": [
+	{
+		"match": "\\.py",
+		"autoClearConsole": true,
+		"isClearStatusBar": true,
+		"cmd": "cd ${workspaceRoot} \n python3 ${file}", //"python3 ${file}",
+		"event": "onFileChange"
+	}
+]
+}
