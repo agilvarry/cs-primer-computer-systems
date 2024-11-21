@@ -1,6 +1,6 @@
 if __name__ == "__main__":
     from sys import stdout
-    with open('cases', 'rb') as f, open('out', 'wb') as o, open('expected', 'rb') as e:
+    with open('cases', 'rb') as f:
         while True:
             utf = f.readline()
             line = utf[1:-1]
@@ -14,13 +14,10 @@ if __name__ == "__main__":
                 if b & 0x80 != 0:
                     emoji.append(b)
                     try:
-                        e = bytes(emoji)
-                        e.decode("utf-8")
+                        bytes(emoji).decode("utf-8")
                         out = out + emoji
                         emoji=[]
                     except:
                         continue
             stdout.write(bytes(out).decode("utf-8"))
             stdout.write('\n')
-
-    
