@@ -4,7 +4,7 @@
 		"match": "\\.py",
 		"autoClearConsole": true,
 		"isClearStatusBar": true,
-		"cmd": "cd ${workspaceRoot} \n python3 ${file}",
+		"cmd": "cd ${workspaceRoot} \n diff expected <(python3 truncate.py cases)",
 		"event": "onFileChange"
 	}
 ]
