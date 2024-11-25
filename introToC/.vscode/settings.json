@@ -1,0 +1,11 @@
+{
+	"filewatcher.commands": [
+	{
+		"match": "\\.c",
+		"autoClearConsole": true,
+		"isClearStatusBar": true,
+		"cmd": "cd ${workspaceRoot} \n cc ${file} \n ${workspaceRoot}/a.out", 
+		"event": "onFileChange"
+	}
+]
+}

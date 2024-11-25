@@ -12,7 +12,7 @@ bool ispangram(char *s) {
   printf("hello\n");
   for(int i = 0; i < strlen(s); i++){
     bs = (bs & (1 << tolower(s[i])-'a'));
-    // bs &= 2;
+   
     printf("%c:  %d: %d \n", s[i], 1<< s[i]-'a', bs);
   }
   
