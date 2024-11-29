@@ -3,12 +3,19 @@
 
 static PyObject *cvarint_encode(PyObject *self, PyObject *args) {
     unsigned long long n;
-
-    if!(PyArc_ParseTuple(arcs, "K", &n)){
-        return NULL;
+    char out[10];
+    if (!PyArg_ParseTuple(args, "K", &n)) return NULL;
+    int i = 0;
+    while (n > 0){
+        char part = n & 0x7f;
+        n >>= 7;
+        if (n){
+            part |= 0x80;
+        } 
+        out[i] = part;
+        i++;
     }
-    printf("n= %llu\n", n);
-    return n;
+    return PyBytes_FromStringAndSize(out, i);
 }
  
 static PyObject *cvarint_decode(PyObject *self, PyObject *args) {
