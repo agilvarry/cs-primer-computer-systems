@@ -1,0 +1,13 @@
+{
+	"filewatcher.commands": [
+	{
+		"match": "\\.c",
+		"autoClearConsole": true,
+		"isClearStatusBar": true,
+		"cmd": "cd ${workspaceRoot} \n gcc ${file} -shared -o cvariant.so -I/usr/include/python3.12", 
+		"event": "onFileChange"
+	}
+]
+}
+
+//cc ${file} \n ${workspaceRoot}/a.out
