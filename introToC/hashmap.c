@@ -39,6 +39,7 @@ Hashmap *Hashmap_new(void){
 void Hashmap_free(Hashmap *hm){
   Node *prevnode, *node; 
   for (int i=0; i<hm->size; i++){
+    node = hm->buckets[i];
     while(node != NULL){
       prevnode = node;
       node = node->next;
@@ -143,7 +144,7 @@ int main(){
     assert(Hashmap_get(h, key) == &ns[i]);
   }
 
-  // Hashmap_free(h);
+  Hashmap_free(h);
   /*
      stretch goals:
      - expand the underlying array if we start to get a lot of collisions
