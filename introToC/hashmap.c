@@ -37,7 +37,6 @@ Hashmap *Hashmap_new(void){
 }
 
 void Hashmap_free(Hashmap *hm){
-  // TODO free nodes of buckets
   Node *prevnode, *node; 
   for (int i=0; i<hm->size; i++){
     while(node != NULL){
