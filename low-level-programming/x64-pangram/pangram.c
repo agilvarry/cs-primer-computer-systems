@@ -10,8 +10,7 @@ bool ispangram(char *s) {
   uint32_t bs = 0;
   char c;
   while ((c = *s++) != '\0') {
-    if (c < '@')
-      continue; // ignore first 64 chars in ascii table
+    (c < '@') // ignore first 64 chars in ascii table
     bs |= 1 << (c & 0x1f);
   }
   return (bs & MASK) == MASK;
