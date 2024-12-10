@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "gdb",
+            "request": "launch",
+            "name": "GDB64",
+            "target": "${fileDirname}/${fileBasenameNoExtension}",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText",
+            "preLaunchTask": "asm64",
+            "autorun": ["set output-radix 16"]
+
+        }
+    
+    ]
+}

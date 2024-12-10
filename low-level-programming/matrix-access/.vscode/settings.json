@@ -1,0 +1,12 @@
+{
+  "filewatcher.commands": [
+    {
+      "match": "\\.asm",
+      "autoClearConsole": true,
+      "isClearStatusBar": true,
+      "cmd": "cd ${workspaceRoot} \n make",
+      "event": "onFileChange"
+    }
+  ],
+  "C_Cpp_Runner.msvcBatchPath": ""
+}
