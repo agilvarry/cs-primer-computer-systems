@@ -1,0 +1,15 @@
+{
+  "filewatcher.commands": [
+    {
+      "match": "\\.c",
+      "autoClearConsole": true,
+      "isClearStatusBar": true,
+      "cmd": "cd ${workspaceRoot} \n cc -02 -S ${file} \n ${workspaceRoot}/a.out",
+      "event": "onFileChange"
+    }
+  ],
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "files.associations": {
+    "math.h": "c"
+  }
+}
